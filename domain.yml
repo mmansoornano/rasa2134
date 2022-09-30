@@ -8,6 +8,25 @@ intents:
   - mood_great
   - mood_unhappy
   - bot_challenge
+  - faq
+  - inform
+
+entities:
+  - module_name
+
+slots:
+  module_name:
+    type: text
+    auto_fill: false
+    influence_conversation: false
+
+forms:
+  module_form:
+    # required_slots:
+    module_name:
+      - type: from_entity
+        entity: module_name
+
 
 responses:
   utter_greet:
@@ -28,6 +47,22 @@ responses:
 
   utter_iamabot:
   - text: "I am a bot, powered by Rasa."
+
+  utter_submit:
+  - text: "All done!"
+  utter_slots_values:
+  - text: "I am going to run a restaurant search using the following parameters:\n
+            - Module name: {module_name}"
+
+  utter_ask_module_name:
+  - text: "What is the name of the module?"
+  - text: "Which module do you want to query?"
+
+  utter_faq/ask_module_code:
+  - text: The code of {module_name} is 01345.
+
+  utter_faq/ask_module_leader:
+  - text: The name of {module_name} leader is Edwin.
 
 session_config:
   session_expiration_time: 60

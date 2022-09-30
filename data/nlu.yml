@@ -19,7 +19,6 @@ nlu:
 
 - intent: goodbye
   examples: |
-    - good afternoon
     - cu
     - good by
     - cee you later
@@ -90,3 +89,27 @@ nlu:
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
+
+- intent: faq/ask_module_code
+  examples: |
+    - What is the module code for the module?
+    - What is the code of [English](module_name)?
+    - Can you tell the code of the module?
+    - Please tell the code of [Spanich](module_name) module.
+    - Can you tell the code of [French](module_name)?
+
+- intent: faq/ask_module_leader
+  examples: |
+    - Who is the module leader?
+    - What is the name of the leader?
+    - Can you tell the name of the leader?
+    - Who is module leader of [Spanich](module_name) module?
+    - Module leader name of [English](module_name)?
+    - Who is [French](module_name) module leader?
+
+- intent: inform
+  examples: |
+    - Module name is [English](module_name).
+    - Its [English](module_name).
+    - [Spanich](module_name) module.
+    - I am talking about [French](module_name).

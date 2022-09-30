@@ -4,3 +4,5 @@ auth
 db
 certs
 logs
+#.config/rasa/
+./.config/*
