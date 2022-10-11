@@ -130,9 +130,11 @@ services:
 
   app:
     restart: always
-    image: "rasa/rasa-x-demo:${RASA_X_DEMO_VERSION}"
-    expose:
-      - "5055"
+    image: "rasa/rasa-sdk:${RASA_VERSION}"
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./actions:/app/actions
     depends_on:
       - rasa-production
 

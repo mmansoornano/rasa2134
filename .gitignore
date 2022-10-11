@@ -6,3 +6,4 @@ certs
 logs
 #.config/rasa/
 ./.config/*
+__pycache__

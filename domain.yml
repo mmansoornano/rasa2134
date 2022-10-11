@@ -27,6 +27,8 @@ forms:
       - type: from_entity
         entity: module_name
 
+actions:
+  - validate_module_form
 
 responses:
   utter_greet:
@@ -51,7 +53,7 @@ responses:
   utter_submit:
   - text: "All done!"
   utter_slots_values:
-  - text: "I am going to run a restaurant search using the following parameters:\n
+  - text: "Recorded slots:\n
             - Module name: {module_name}"
 
   utter_ask_module_name:
